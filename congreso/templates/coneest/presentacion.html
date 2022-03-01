@@ -1,0 +1,59 @@
+{% load static %}
+{% block content %}
+
+
+<section>
+	<div class="py-4"></div>
+
+	<div class="container">
+		<h1 class="text-primary">Presentacion</h1>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi amet explicabo saepe, error itaque perferendis doloribus temporibus in sit, id similique maiores fuga laborum eum. Tempora minus perspiciatis est hic iusto voluptas? Tempora, ut.</p>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi amet explicabo saepe, error itaque perferendis doloribus temporibus in sit, id similique maiores fuga laborum eum. Tempora minus perspiciatis est hic iusto voluptas? Tempora, ut.</p>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi amet explicabo saepe, error itaque perferendis doloribus temporibus in sit, id similique maiores fuga laborum eum. Tempora minus perspiciatis est hic iusto voluptas? Tempora, ut.</p>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi amet explicabo saepe, error itaque perferendis doloribus temporibus in sit, id similique maiores fuga laborum eum. Tempora minus perspiciatis est hic iusto voluptas? Tempora, ut.</p>
+	</div>
+	<div class="py-4"></div>
+	
+</section>
+
+<section>
+	<div class="container">
+		<h1 class="text-primary">Cursos y Mini Cursos</h1>
+		<div class="row">
+			<div class="col-md-4">
+				<img src="{% static 'media/curso.jpg' %}" class="img-fluid" alt="">
+			</div>
+			<div class="col-md-8">
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi amet explicabo saepe, error itaque perferendis doloribus temporibus in sit, id similique maiores fuga laborum eum. Tempora minus perspiciatis est hic iusto voluptas? Tempora, ut.</p>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi amet explicabo saepe, error itaque perferendis doloribus temporibus in sit, id similique maiores fuga laborum eum. Tempora minus perspiciatis est hic iusto voluptas? Tempora, ut.</p>
+				<a href="{% url 'cursos' %}" class="btn btn-danger">ver mas</a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="py-4"></div>
+
+</section>
+
+<section>
+	<div class="container">
+		<h1 class="text-primary">Horarios y Actividades</h1>
+		<div class="row">
+			<div class="col-md-8">
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi amet explicabo saepe, error itaque perferendis doloribus temporibus in sit, id similique maiores fuga laborum eum. Tempora minus perspiciatis est hic iusto voluptas? Tempora, ut.</p>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate modi amet explicabo saepe, error itaque perferendis doloribus temporibus in sit, id similique maiores fuga laborum eum. Tempora minus perspiciatis est hic iusto voluptas? Tempora, ut.</p>
+				<a href="#" class=" btn btn-danger">ver mas</a>
+			</div>
+			<div class="col-md-4">
+				<img src="{% static 'media/horario.jpg' %}" class="img-fluid" alt="">
+
+			</div>
+		</div>
+	</div>
+	
+	<div class="py-4"></div>
+
+</section>
+
+
+{% endblock %}

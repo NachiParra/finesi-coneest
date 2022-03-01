@@ -1,0 +1,36 @@
+{% load static %}
+{% block content %}
+<section>
+    <div class="container-md">
+        <h1 class="text-primary">Ponentes</h1>
+        <div class="row">
+            <div class="owl-carousel owl-theme m-2">
+                {% for ponente in ponentes %}
+                <div class="item">
+                    <div class="card shadow-lg p-3 mb-5 bg-body rounded" style="width: 16.5rem;">
+                        <img src="{{ ponente.foto.url }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ ponente.nombres }} {{ ponente.apellidos }}</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <strong class="text-danger">Universidad: </strong>{{ ponente.universidad }}
+                            </li>
+                            <li class="list-group-item">
+                                <strong class="text-danger">Curso: </strong>{{ ponente.curso }}
+                            </li>
+                            <li class="list-group-item">
+                                <strong class="text-danger">Categoria: </strong>{{ ponente.categoria }}
+                            </li>
+                            <li class="list-group-item">
+                                <strong class="text-danger">Ciudad: </strong>{{ ponente.ciudad }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
