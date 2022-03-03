@@ -1,3 +1,30 @@
 *{
     font-family: 'Poppins', sans-serif;
 }
+
+.navbar {
+    background: #281975;
+}
+
+
+.section-curso{
+    background: #eeeff3;
+}
+
+
+
+
+
+.custom-footer{
+    
+    background: #281975;
+}
+
+.custom-footer ul li {
+    list-style: none;
+}
+
+.custom-footer ul li a {
+    color: white;
+    text-decoration: none;
+}
