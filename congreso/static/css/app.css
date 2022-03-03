@@ -6,6 +6,15 @@
     background: #281975;
 }
 
+.custom-title{
+    color: #281975;
+}
+
+
+.carousel img{
+    filter: brightness(50%);
+}
+
 
 .section-curso{
     background: #eeeff3;

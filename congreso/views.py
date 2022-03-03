@@ -15,3 +15,6 @@ def cursos(request):
 
 def registro(request):
     return render(request, 'coneest/registro/registro.html')
+
+def cronograma(request):
+    return render(request, 'coneest/cronograma/cronograma.html')

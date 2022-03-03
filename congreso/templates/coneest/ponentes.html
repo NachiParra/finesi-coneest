@@ -1,8 +1,10 @@
 {% load static %}
 {% block content %}
-<section>
-    <div class="container-md">
-        <h1 class="text-primary">Ponentes</h1>
+<section class="section-curso" id="ponentes_name">
+        <div class="p-4"></div>
+    <div class="container">
+        <h1 class="custom-title">Ponentes</h1>
+        <div class="p-2"></div>
         <div class="row">
             <div class="owl-carousel owl-theme m-2">
                 {% for ponente in ponentes %}
@@ -11,6 +13,7 @@
                         <img src="{{ ponente.foto.url }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ ponente.nombres }} {{ ponente.apellidos }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mollis.</h6>
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">

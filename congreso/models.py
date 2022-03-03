@@ -24,4 +24,3 @@ class Ponente(models.Model):
         return self.nombres
 
 
-
