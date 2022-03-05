@@ -13,20 +13,27 @@
                         <img src="{{ ponente.foto.url }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ ponente.nombres }} {{ ponente.apellidos }}</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mollis.</h6>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ ponente.descripcion }}</h6>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
+                            <li class="list-group-item"><small>
                                 <strong class="text-danger">Universidad: </strong>{{ ponente.universidad }}
+                            </small>
                             </li>
-                            <li class="list-group-item">
+                            <li class="list-group-item"><small>
                                 <strong class="text-danger">Curso: </strong>{{ ponente.curso }}
+                            </small>
+                            <li class="list-group-item"><small>
+                                <strong class="text-danger">Mini Curso: </strong>{{ ponente.minicurso }}
+                            </small>
                             </li>
-                            <li class="list-group-item">
-                                <strong class="text-danger">Categoria: </strong>{{ ponente.categoria }}
+                            <li class="list-group-item"><small>
+                                <strong class="text-danger">Email: </strong>{{ ponente.correo }}
+                            </small>
                             </li>
-                            <li class="list-group-item">
-                                <strong class="text-danger">Ciudad: </strong>{{ ponente.ciudad }}
+                            <li class="list-group-item"><small>
+                                <strong class="text-danger">Ciudad: </strong>{{ ponente.ciudad }}   <strong class="text-danger">  Pais: </strong> {{ ponente.pais }}
+                            </small>
                             </li>
                         </ul>
                     </div>

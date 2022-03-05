@@ -1,7 +1,6 @@
 from django.contrib import admin
 
-# from .models import Ponente, Curso, MiniCurso
-from .models import Ponente, Curso
+from .models import Ponente, Curso, MiniCurso
 
 
 
@@ -9,4 +8,4 @@ from .models import Ponente, Curso
 
 admin.site.register(Ponente)
 admin.site.register(Curso)
-# admin.site.register(MiniCurso)
+admin.site.register(MiniCurso)

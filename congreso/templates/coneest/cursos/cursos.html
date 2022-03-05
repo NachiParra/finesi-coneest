@@ -4,27 +4,35 @@
 
 <section class="section-curso">
   <div class="p-4"></div>
+  {% for curso in cursos %}
   <div class="container">
     <p class="h3 custom-title">Cursos</p>
     <div class="p-2"></div>
     <div class="accordion" id="accordionExample">
       <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-            aria-expanded="true" aria-controls="collapseOne">
-            Big Data
+        <h2 class="accordion-header" id="{{curso.id}}">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#{{curso.id}}"
+            aria-expanded="true" aria-controls="{{curso.id}}">
+            {{curso.nombre}}
           </button>
         </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio explicabo in illo molestias atque quod nostrum doloribus veritatis dolor dolores.</p>
-            <p><strong>Ponente: </strong></p>
-            <p><strong>Dia: </strong></p>
-            <p><strong>Hora: </strong></p>
+        <div id="{{curso.id}}" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <p>{{curso.descripcion_curso}}</p>
+          <p>
+            <small><strong>Dia: </strong>{{curso.dia}}</small>
+          </p>
+          <p>
+            <small><strong>hora: </strong>{{curso.hora}}</small>
+          </p>
+          <p>
+            <small><strong>Dia: </strong>{{curso.dia}}</small>
+          </p>
           </div>
         </div>
       </div>
+      {% endfor %}
     </div>
   </div>
 
@@ -47,9 +55,6 @@
           data-bs-parent="#accordionExample">
           <div class="accordion-body">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio explicabo in illo molestias atque quod nostrum doloribus veritatis dolor dolores.</p>
-            <p><strong>Ponente: </strong>{{}}</p>
-            <p><strong>Dia: </strong>{{}}</p>
-            <p><strong>Hora: </strong>{{}}</p>
           </div>
         </div>
       </div>
