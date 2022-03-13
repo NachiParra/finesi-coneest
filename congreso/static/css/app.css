@@ -3,11 +3,11 @@
 }
 
 .navbar {
-    background: #281975;
+    background: #26186E;
 }
 
 .custom-title{
-    color: #281975;
+    color: #26186E;
 }
 
 
@@ -21,12 +21,15 @@
 }
 
 
+.btn-custom{
+background:#FAE337 ;
+}
 
 
 
 .custom-footer{
     
-    background: #281975;
+    background: #26186E;
 }
 
 .custom-footer ul li {

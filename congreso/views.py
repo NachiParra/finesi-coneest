@@ -13,7 +13,8 @@ def index(request):
 
 def cursos(request):
     cursos = Curso.objects.all()
-    return render(request, 'coneest/cursos/cursos.html', {'cursos': cursos})
+    mini_cursos= MiniCurso.objects.all()
+    return render(request, 'coneest/cursos/cursos.html', {'cursos': cursos, 'mini_cursos': mini_cursos})
 
 def registro(request):
     return render(request, 'coneest/registro/registro.html')

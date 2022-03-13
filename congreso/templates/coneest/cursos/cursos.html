@@ -2,65 +2,91 @@
 
 {% block content %}
 
-<section class="section-curso">
-  <div class="p-4"></div>
-  {% for curso in cursos %}
+
+<div class="container-fluid section-curso">
   <div class="container">
-    <p class="h3 custom-title">Cursos</p>
-    <div class="p-2"></div>
-    <div class="accordion" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="{{curso.id}}">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#{{curso.id}}"
-            aria-expanded="true" aria-controls="{{curso.id}}">
-            {{curso.nombre}}
-          </button>
-        </h2>
-        <div id="{{curso.id}}" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-        data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <p>{{curso.descripcion_curso}}</p>
-          <p>
-            <small><strong>Dia: </strong>{{curso.dia}}</small>
-          </p>
-          <p>
-            <small><strong>hora: </strong>{{curso.hora}}</small>
-          </p>
-          <p>
-            <small><strong>Dia: </strong>{{curso.dia}}</small>
-          </p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <section>
+        <div class="p-4"></div>
+        <p class="h3">Lista de cursos</p>
+        <div class="p-2"></div>
+        <ul class="list-group list-group-flush">
+          {% for curso in cursos %}
+            <a href="#" class="list-group-item list-group-item-action list-group-item-warning">{{curso.nombre}}</a>
+          {% endfor %}
+        </ul>
+        <div class="p-4"></div>
+        <p class="h3">Lista Mini Cursos</p>
+        <div class="p-2"></div>
+        <ul class="list-group list-group-flush">
+          {% for mini in mini_cursos %}
+          <li class="list-group-item"><a href="">{{mini.nombre}}</a></li>
+          {% endfor %}
+        </ul>
+      </section>
+    </div>
+    <div class="col-md-8 section-curso">
+      <section class="section-curso">
+        <div class="p-4"></div>
+        <div class="container">
+          <div>
+            <p class="h1">Cursos</p>
           </div>
+          {% for curso in cursos %}
+          <div class="card">
+            <div class="card-header text-danger">
+              {{curso.nombre}}
+            </div>
+            <div class="card-body">
+              <blockquote class=" mb-0">
+                <p>{{curso.descripcion_curso}}</p>
+                <p><small><strong class="text-primary">Dia: </strong>{{curso.dia}}</small></p>
+                <p><small><strong class="text-primary">Hora: </strong>{{curso.hora}}</small></p>
+                <p><small><strong class="text-primary">Ponente: </strong>{{curso.ponente}}</small></p>
+              </blockquote>
+            </div>
+          </div>
+          <div class="p-1"></div>
+          {% endfor %}
         </div>
-      </div>
-      {% endfor %}
+      </section>
+
+
+      <section class="section-curso">
+        <div class="p-4"></div>
+        <div class="container">
+          <div>
+            <p class="h1">Mini Cursos</p>
+          </div>
+          {% for mini in mini_cursos %}
+          <div class="card">
+            <div class="card-header text-danger">
+              {{mini.nombre}}
+            </div>
+            <div class="card-body">
+              <blockquote class=" mb-0">
+                <p>{{mini.descripcion_curso}}</p>
+                <p><small><strong class="text-primary">Dia: </strong>{{mini.dia}}</small></p>
+                <p><small><strong class="text-primary">Hora: </strong>{{mini.hora}}</small></p>
+                <p><small><strong class="text-primary">Ponente: </strong>{{mini.ponente}}</small></p>
+              </blockquote>
+            </div>
+          </div>
+          <div class="p-1"></div>
+          {% endfor %}
+        </div>
+        <div class="p-4"></div>
+      </section>
+
+
+
     </div>
   </div>
+</div>
 
-
-
-
-  <div class="p-4"></div>
-  <div class="container">
-    <p class="h3 custom-title">Mini Cursos</p>
-    <div class="p-2"></div>
-    <div class="accordion" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1"
-            aria-expanded="true" aria-controls="collapseOne1">
-            Mini Big Data
-          </button>
-        </h2>
-        <div id="collapseOne1" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio explicabo in illo molestias atque quod nostrum doloribus veritatis dolor dolores.</p>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
-  <div class="p-4"></div>
-</section>
+
 
 {% endblock %}
